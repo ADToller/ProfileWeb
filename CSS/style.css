@@ -3,13 +3,17 @@
 * {
     font-family: 'Montserrat', sans-serif;
     color: #FFF;
-   }
+}
 
-p{
+p {
     color: #ccc;
 }
 
-h2{
+h1{
+    margin: 1rem;
+}
+
+h2 {
     color: orange;
 }
 
@@ -23,61 +27,73 @@ body {
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 1fr;
     grid-gap: 10px;
-    background-color: #444;
+    background-color: #333;
     padding: 10px;
 }
 
 header {
     grid-area: header;
-    background-color: #777;
+    background-color: #666;
     text-align: center;
     position: sticky;
     top: 0;
 }
 
-nav{
+nav {
     display: flex;
     flex-direction: column;
 }
 
 aside {
     grid-area: aside;
-    background-color: #555;
+    background-color: #444;
+}
+
+main section {
+    background-color: #444;
 }
 
 .experience {
     grid-area: experience;
-    background-color: #555;
 }
 
 .education {
     grid-area: education;
-    background-color: #555;
 }
 
 .education {
     grid-area: education;
-    background-color: #555;
 }
 
 .programing {
     grid-area: programing;
-    background-color: #555;
 }
 
 .software {
     grid-area: software;
-    background-color: #555;
 }
 
 .interest {
     grid-area: interest;
-    background-color: #555;
+}
+
+.contact {
+    grid-area: contact;
+
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    background-color: #444;
 }
 
 footer {
     grid-area: footer;
-    background-color: #555;
+    background-color: #444;
     align-self: flex-end;
 }
 
@@ -90,7 +106,8 @@ main {
         'education'
         'programing'
         'software'
-        'interest';
+        'interest'
+        'contact';
     grid-template-columns: 1fr;
     grid-gap: 10px;
     padding: 10px;
@@ -103,7 +120,7 @@ main {
 
     /*for tablet */
 
-    nav{
+    nav {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -118,7 +135,7 @@ main {
         grid-template-rows: auto 1fr auto;
         grid-template-columns: 250px 1fr;
         grid-gap: 10px;
-        background-color: #444;
+        background-color: #333;
         padding: 10px;
     }
 
@@ -130,7 +147,8 @@ main {
             'education'
             'programing'
             'software'
-            'interest';
+            'interest'
+            'contact';
         grid-template-columns: 1fr;
         grid-gap: 10px;
         padding: 10px;
@@ -148,7 +166,8 @@ main {
             'experience experience'
             'education education'
             'programing software'
-            'interest interest';
+            'interest interest'
+            'contact contact';
         grid-template-columns: 1fr 1fr;
         grid-gap: 10px;
         padding: 10px;
