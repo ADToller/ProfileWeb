@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFF;
+   }
+
+p{
+    color: #ccc;
+}
+
+h2{
+    color: orange;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        'header'
+        'aside'
+        'main'
+        'footer';
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    background-color: #444;
+    padding: 10px;
+}
+
+header {
+    grid-area: header;
+    background-color: #777;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+}
+
+aside {
+    grid-area: aside;
+    background-color: #555;
+}
+
+.experience {
+    grid-area: experience;
+    background-color: #555;
+}
+
+.education {
+    grid-area: education;
+    background-color: #555;
+}
+
+.education {
+    grid-area: education;
+    background-color: #555;
+}
+
+.programing {
+    grid-area: programing;
+    background-color: #555;
+}
+
+.software {
+    grid-area: software;
+    background-color: #555;
+}
+
+.interest {
+    grid-area: interest;
+    background-color: #555;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #555;
+    align-self: flex-end;
+}
+
+/* for smartphone */
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+        'experience'
+        'education'
+        'programing'
+        'software'
+        'interest';
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+
+
+
+@media only screen and (min-width: 600px) {
+
+    /*for tablet */
+
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    body {
+        display: grid;
+        grid-template-areas:
+            'header header'
+            'aside  main'
+            'aside  footer';
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 250px 1fr;
+        grid-gap: 10px;
+        background-color: #444;
+        padding: 10px;
+    }
+
+    main {
+        grid-area: main;
+        display: grid;
+        grid-template-areas:
+            'experience'
+            'education'
+            'programing'
+            'software'
+            'interest';
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    /*for desktop */
+
+    main {
+        grid-area: main;
+        display: grid;
+        grid-template-areas:
+            'experience experience'
+            'education education'
+            'programing software'
+            'interest interest';
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        padding: 10px;
+
+    }
+}
