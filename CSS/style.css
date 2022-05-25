@@ -41,13 +41,34 @@ h4 {
     display: inline;
 }
 
+/* INFO */
+.info li{
+    padding: 0;
+    margin: 0;
+}
+
+.info{
+    list-style-type: none;
+}
+
+.info .fa {
+    padding: 0.2rem;
+    margin-right: 0.5rem;
+}
+
+iframe {
+    display: none;
+    height: 12rem;
+    width: 12rem;
+    flex-grow: 1;
+}
 
 .follow div {
     margin: 1rem;
 }
 
 /* font awesome */
-.fa {
+.follow .fa {
     padding: 20px;
     font-size: 1rem;
     width: 1rem;
@@ -55,16 +76,15 @@ h4 {
     text-align: center;
     text-decoration: none;
     border: 1px solid #999;
-    color: #999;
+    color: var(--color-paragraph);
     margin: 0.2rem;
 }
 
-.fa:hover {
+.follow .fa:hover {
     color: #FFF;
-    width: 1.2rem;
-    height: 1.2rem;
+    transform: scale(1.1);
 }
-
+/* !!!!!!!!!VER| */
 a {
     text-decoration: none;
     transition: 0s, color;
@@ -118,6 +138,18 @@ main section {
     background-color: var(--color-section);
 }
 
+.empleo{
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin: 1rem;
+}
+
+.empleo:hover {
+    border: 1px solid var(--color-title);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
 .periodo,
 .tipo-contrato, .empresa {
     color: #FFFFFF66;
@@ -163,8 +195,35 @@ main section {
     grid-area: education;
 }
 
+.estudio{
+    border: 1px solid transparent;
+}
+
+.estudio:hover {
+    border: 1px solid var(--color-title);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
 .programing {
     grid-area: programing;
+}
+
+.programing li {
+    display: flex;
+    align-items: center;
+    line-height: 2rem;
+}
+
+.programing ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: space-around;
+    text-align: center;
+    align-content: space-around;
 }
 
 .software {
@@ -176,7 +235,16 @@ main section {
     flex-wrap: wrap;
     flex-direction: row;
     box-sizing: border-box;
-    justify-content: flex-start;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.software-item{
+    border: solid transparent;
+}
+
+.software-item:hover{
+    transform: scale(1.1);
 }
 
 .circleBase {
@@ -217,16 +285,6 @@ main section {
 
 }
 
-.programing ul {
-    list-style-type: none;
-
-}
-
-.programing li {
-    display: flex;
-    align-items: center;
-    line-height: 2rem;
-}
 
 .bar {
     background: #ffffff;

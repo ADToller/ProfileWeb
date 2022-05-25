@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/acc46b4d32.js" crossorigin="anonymous"></script>
     <title>Andrés Toller</title>
 </head>
 
@@ -39,11 +40,15 @@
             Me destaco por ser responsable, organizado y dedicado para realizar tareas de calidad.
         </p>
         <h2>Info</h2>
-        <ul>
+        <ul class="info">
             <li>+54 261-tutututu</li>
-            <li>toller.andres@gmail.com</li>
-            <li>Mendoza, Argentina</li>
-            <li>Página Web</li>
+            <li><i class="fa fa-envelope-o" aria-hidden="true"></i>toller.andres@gmail.com</li>
+            <li><i class="fa fa-map-marker" aria-hidden="true"></i>Mendoza, Argentina<iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53581.487826853205!2d-68.88471578615712!3d-32.9287463241049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e095dea6a01e7%3A0x90fb57ac5758c337!2sGodoy%20Cruz%2C%20Mendoza!5e0!3m2!1ses-419!2sar!4v1653433877605!5m2!1ses-419!2sar"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe></li>
+
+            <li><i class="fa fa-file-o" aria-hidden="true"></i></i>Página Web</li>
         </ul>
         <h2>Follow</h2>
         <div class="follow">
@@ -63,7 +68,7 @@
             </a>
             <div class="empleo">
                 <h3 class="puesto">Técnico electrónico</h3>
-                <h4 class="empresa">Datasense</h4>
+                <h4 class="empresa"><a href="http://www.datasense.com.ar" target="_blank">Datasense</a></h4> 
                 <span class="tipo-contrato">Jornada completa</span>
                 <span class="periodo">Ago 2018 - actualidad</span>
                 <ul>
@@ -79,7 +84,7 @@
             </div>
             <div class="empleo">
                 <h3 class="puesto">Técnico de mantenimiento</h3>
-                <h4 class="empresa">FECOVITA</h4>
+                <h4 class="empresa"><a href="http://www.fecovita.com/" target="_blank">FECOVITA</a></h4>
                 <span class="tipo-contrato">Contrato de prácticas</span>
                 <span class="periodo">Jun 2017 - Jun 2018</span>
                 <ul>
@@ -96,7 +101,7 @@
             </div>
             <div class="empleo">
                 <h3 class="puesto">Data Entry</h3>
-                <h4 class="empresa">Gisworking</h4>
+                <h4 class="empresa"><a href="https://www.gisworking.com/" target="_blank">Gisworking</a></h4>
                 <span class="tipo-contrato">Jornada parcial</span>
                 <span class="periodo">Ene 2016 - Feb 2017</span>
                 <p>Mapeo de Puntos de Interés (POIs) en Latinoamérica</p>
@@ -137,21 +142,24 @@
             <a name="programing">
                 <h2>Stack de tecnologías</h2>
             </a>
-            <ul>
-                <li><span>HTML</span>
-                    <div class="bar"></div>
-                </li>
-                <li>CSS<div class="bar"></div>
-                </li>
-                <li>JavaScript<div class="bar"></div>
-                </li>
-                <li>Java<div class="bar"></div>
-                </li>
-                <li>Python<div class="bar"></div>
-                </li>
-                <li>C++<div class="bar"></div>
-                </li>
-            </ul>
+            <div class="programing-container">
+                <ul>
+                    <li><span>HTML</span>
+                        <div class="bar"></div>
+                    </li>
+                    <li>CSS<div class="bar"></div>
+                    </li>
+                    <li>JavaScript<div class="bar"></div>
+                    </li>
+                    <li>Java<div class="bar"></div>
+                    </li>
+                    <li>Python<div class="bar"></div>
+                    </li>
+                    <li>C++<div class="bar"></div>
+                    </li>
+                </ul>
+            </div>
+
         </section>
 
         <section class="software">
@@ -159,36 +167,54 @@
                 <h2>Manejo de Software</h2>
             </a>
             <div class="software-container">
-                <div><svg width="100" height="100">
+                <div class="software-item"><svg width="100" height="100">
                         <circle class="circleBase" cx="50" cy="50" r="40" />
                         Sorry, your browser does not support inline SVG.
                         <circle class="circleBar" cx="50" cy="50" r="40">
                         </circle>
-                    </svg></div>
-                <div><svg width="100" height="100">
+                    </svg>
+                    <p>Photoshop</p>
+                </div>
+                <div class="software-item"><svg width="100" height="100">
                         <circle class="circleBase" cx="50" cy="50" r="40" />
                         Sorry, your browser does not support inline SVG.
                         <circle class="circleBar" cx="50" cy="50" r="40">
                         </circle>
-                    </svg></div>
-                <div><svg width="100" height="100">
+                    </svg>
+                    <p>Cinema 4D</p>
+                </div>
+                <div class="software-item"><svg width="100" height="100">
                         <circle class="circleBase" cx="50" cy="50" r="40" />
                         Sorry, your browser does not support inline SVG.
                         <circle class="circleBar" cx="50" cy="50" r="40">
                         </circle>
-                    </svg></div>
-                <div><svg width="100" height="100">
+                    </svg>
+                    <p>Office</p>
+                </div>
+                <div class="software-item"><svg width="100" height="100">
                         <circle class="circleBase" cx="50" cy="50" r="40" />
                         Sorry, your browser does not support inline SVG.
                         <circle class="circleBar" cx="50" cy="50" r="40">
                         </circle>
-                    </svg></div>
-                <div><svg width="100" height="100">
+                    </svg>
+                    <p>AutoCAD</p>
+                </div>
+                <div class="software-item"><svg width="100" height="100">
                         <circle class="circleBase" cx="50" cy="50" r="40" />
                         Sorry, your browser does not support inline SVG.
                         <circle class="circleBar" cx="50" cy="50" r="40">
                         </circle>
-                    </svg></div>
+                    </svg>
+                    <p>Solid Edge</p>
+                </div>
+                <div class="software-item"><svg width="100" height="100">
+                        <circle class="circleBase" cx="50" cy="50" r="40" />
+                        Sorry, your browser does not support inline SVG.
+                        <circle class="circleBar" cx="50" cy="50" r="40">
+                        </circle>
+                    </svg>
+                    <p>After Effects</p>
+                </div>
             </div>
         </section>
 
