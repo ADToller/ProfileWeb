@@ -8,13 +8,10 @@
     --color-header: rgb(37, 28, 66);
 }
 
-
 * {
     font-family: 'Montserrat', sans-serif;
     color: var(--color-paragraph);
 }
-
-
 
 p {
     color: var(--color-paragraph);
@@ -30,9 +27,17 @@ h2 {
     margin: 1rem;
 }
 
+h2:hover {
+    text-shadow: 0 0 5px var(--color-title);
+}
+
 h3 {
     color: var(--color-paragraph);
     margin: 1rem;
+    border-bottom: 2px solid var(--color-title);
+    /* border-radius: 3px; */
+    /* background-color: var(--color-section); */
+    padding: 0.5rem 0.5rem 0.5rem 0rem;
 }
 
 h4 {
@@ -41,19 +46,68 @@ h4 {
     display: inline;
 }
 
+
 /* INFO */
-.info li{
-    padding: 0;
-    margin: 0;
+
+.info li {
+    padding: 0px;
+    margin-top: 0.5rem;
 }
 
-.info{
+.info li:hover {
+    padding: 0px;
+    margin-top: 0.5rem;
+    color: #FFF;
+}
+
+.info {
     list-style-type: none;
+    padding-left: 1rem;
+    font-size: small;
+    margin: 0px;
 }
 
 .info .fa {
     padding: 0.2rem;
     margin-right: 0.5rem;
+    margin-top: 0px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: visible;
+    width: 120px;
+    height: 100px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
 
 iframe {
@@ -69,21 +123,22 @@ iframe {
 
 /* font awesome */
 .follow .fa {
-    padding: 20px;
+    padding: 10px;
     font-size: 1rem;
     width: 1rem;
     height: 1rem;
     text-align: center;
     text-decoration: none;
-    border: 1px solid #999;
     color: var(--color-paragraph);
     margin: 0.2rem;
 }
 
 .follow .fa:hover {
     color: #FFF;
-    transform: scale(1.1);
+    text-shadow: 0 0 3px #FFFA;
+    transform: scale(1.2);
 }
+
 /* !!!!!!!!!VER| */
 a {
     text-decoration: none;
@@ -138,10 +193,12 @@ main section {
     background-color: var(--color-section);
 }
 
-.empleo{
+.empleo,
+.estudio {
     border: 1px solid transparent;
     border-radius: 10px;
     margin: 1rem;
+    background-color: var(--color-section);
 }
 
 .empleo:hover {
@@ -150,12 +207,37 @@ main section {
     transition: 0.5s;
 }
 
+.empleo a {
+    display: inline-block;
+    position: relative;
+}
+
+.empleo a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-title);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.empleo a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
 .periodo,
-.tipo-contrato, .empresa {
+.tipo-contrato,
+.empresa {
     color: #FFFFFF66;
 }
 
-.periodo::before{
+.periodo::before {
     content: " · ";
 }
 
@@ -163,7 +245,7 @@ main section {
 
 .experience li {
     list-style-type: none;
-    border:1px solid transparent;
+    border: 1px solid transparent;
     color: #FFFA;
 }
 
@@ -193,16 +275,6 @@ main section {
 
 .education {
     grid-area: education;
-}
-
-.estudio{
-    border: 1px solid transparent;
-}
-
-.estudio:hover {
-    border: 1px solid var(--color-title);
-    border-radius: 10px;
-    transition: 0.5s;
 }
 
 .programing {
@@ -239,11 +311,11 @@ main section {
     text-align: center;
 }
 
-.software-item{
+.software-item {
     border: solid transparent;
 }
 
-.software-item:hover{
+.software-item:hover {
     transform: scale(1.1);
 }
 
@@ -282,7 +354,6 @@ main section {
 
 .contact {
     grid-area: contact;
-
 }
 
 
@@ -401,5 +472,5 @@ main {
 
     }
 
-    
+
 }
