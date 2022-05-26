@@ -31,6 +31,14 @@ h2:hover {
     text-shadow: 0 0 5px var(--color-title);
 }
 
+h2 i {
+    padding: 0.5rem;
+    background-color: var(--color-title);
+    border-radius: 50%;
+    margin-right: 1rem;
+    color: var(--color-header);
+}
+
 h3 {
     color: var(--color-paragraph);
     margin: 1rem;
@@ -71,23 +79,22 @@ h4 {
     padding: 0.2rem;
     margin-right: 0.5rem;
     margin-top: 0px;
+    font-size: medium;
 }
 
 .tooltip {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black;
 }
 
 .tooltip .tooltiptext {
-    visibility: visible;
-    width: 120px;
-    height: 100px;
-    background-color: black;
-    color: #fff;
+    visibility: hidden;
+    width: 180px;
+    height: 180px;
+    background-color: var(--color-background);
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 5px;
     position: absolute;
     z-index: 1;
     top: 150%;
@@ -98,10 +105,10 @@ h4 {
 .tooltip .tooltiptext::after {
     content: "";
     position: absolute;
-    bottom: 100%;
+    bottom: 200%;
     left: 50%;
     margin-left: -5px;
-    border-width: 5px;
+    border-width: 25px;
     border-style: solid;
     border-color: transparent transparent black transparent;
 }
@@ -110,12 +117,7 @@ h4 {
     visibility: visible;
 }
 
-iframe {
-    display: none;
-    height: 12rem;
-    width: 12rem;
-    flex-grow: 1;
-}
+
 
 .follow div {
     margin: 1rem;
