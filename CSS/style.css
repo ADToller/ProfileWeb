@@ -71,7 +71,7 @@ h4 {
 .info {
     list-style-type: none;
     padding-left: 1rem;
-    font-size: small;
+    font-size: medium;
     margin: 0px;
 }
 
@@ -85,6 +85,7 @@ h4 {
 .tooltip {
     position: relative;
     display: inline-block;
+    z-index: 1;
 }
 
 .tooltip .tooltiptext {
@@ -97,9 +98,11 @@ h4 {
     padding: 5px;
     position: absolute;
     z-index: 1;
-    top: 150%;
+    top: 120%;
     left: 50%;
     margin-left: -60px;
+    transition-delay: 0.5s;
+    z-index: 10;
 }
 
 .tooltip .tooltiptext::after {
@@ -115,10 +118,15 @@ h4 {
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
+    transition-delay: 0s;
 }
 
 .follow {
+    display: flex;
     padding: 0.5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 /* font awesome */
@@ -139,7 +147,6 @@ h4 {
     transform: scale(1.2);
 }
 
-/* !!!!!!!!!VER| */
 a {
     text-decoration: none;
     transition: 0s, color;
@@ -159,7 +166,6 @@ nav section:active {
     background: var(--color-title);
     color: #444;
     border-bottom: 3px;
-
 }
 
 body {
@@ -182,6 +188,7 @@ header {
     text-align: center;
     position: sticky;
     top: 0;
+    z-index: 3;
 }
 
 aside {
@@ -208,8 +215,8 @@ main section {
 }
 
 .empleo a {
-    display: inline-block;
     position: relative;
+    z-index: 1;
 }
 
 .empleo a:after {
@@ -268,7 +275,6 @@ main section {
     border-radius: 1px;
 }
 
-/*  */
 .experience {
     grid-area: experience;
 }
@@ -281,21 +287,23 @@ main section {
     grid-area: programing;
 }
 
-.programing li {
+.programing-container {
     display: flex;
-    align-items: center;
-    line-height: 2rem;
+    flex-direction: column;
+    padding: 2rem;
 }
 
-.programing ul {
-    list-style-type: none;
+.programing-item {
+    margin: 1rem;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    box-sizing: border-box;
-    justify-content: space-around;
-    text-align: center;
-    align-content: space-around;
+}
+
+.label {
+    width: 7rem;
+}
+
+.bar {
+    flex-grow: 1;
 }
 
 .software {
@@ -312,11 +320,11 @@ main section {
 }
 
 .software-item {
+    display: grid;
+    grid-template-columns: 1;
+    justify-items: center;
     border: solid transparent;
-}
-
-.software-item:hover {
-    transform: scale(1.1);
+    position: relative;
 }
 
 .circleBase {
@@ -331,6 +339,18 @@ main section {
     fill: none;
     /* stroke-dashoffset:0%;  */
     stroke-dasharray: 50%;
+}
+
+.logo-software {
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    top: 19%;
+}
+
+.software-item:hover .logo-software {
+    transform: scale(1.4) rotateY(360deg);
+    transition: 0.6s ease;
 }
 
 .interest {
@@ -352,17 +372,14 @@ main section {
     margin: 1rem;
 }
 
-.contact {
-    grid-area: contact;
+#inyectec {
+    width: 354px;
+    height: 200px;
 }
 
 
-.bar {
-    background: #ffffff;
-    height: 2px;
-    /* VER WIDTH! */
-    width: 100px;
-    border-radius: 2px;
+.contact {
+    grid-area: contact;
 }
 
 .form-container {
@@ -384,11 +401,19 @@ textarea:focus {
     outline: orange solid 2px;
 }
 
+form button {
+    align-self: flex-end;
+}
+
 footer {
     grid-area: footer;
     background-color: var(--color-section);
-    align-self: flex-end;
 }
+
+footer p {
+    color: var(--color-section);
+}
+
 
 /* for smartphone */
 main {
@@ -438,6 +463,13 @@ main {
         padding: 10px;
     }
 
+    .info {
+        list-style-type: none;
+        padding-left: 1rem;
+        font-size: small;
+        margin: 0px;
+    }
+
     main {
         grid-area: main;
         display: grid;
@@ -452,6 +484,8 @@ main {
         grid-gap: 10px;
         padding: 0px;
     }
+
+
 }
 
 @media only screen and (min-width: 900px) {
