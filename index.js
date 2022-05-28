@@ -1,8 +1,6 @@
 console.log("hola mundo");
 
-
-$('#hoverMe').hover(function () {
-    $('#tooltip').stop().fadeIn();
-}, function () {
-    $('#tooltip').stop().fadeOut();
-});
+var percentageComplete = 0.9;
+var strokeDashOffsetValue = 100 - (percentageComplete * 100);
+var progressBar = $(".js-progress-bar");
+progressBar.css("stroke-dashoffset", strokeDashOffsetValue);
