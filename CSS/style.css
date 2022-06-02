@@ -23,6 +23,10 @@ h1 {
     letter-spacing: 0.5rem;
 }
 
+#nav-desktop{
+    display: none;
+}
+
 h2 {
     color: var(--color-title);
     margin: 1rem;
@@ -54,6 +58,8 @@ h4 {
     margin: 1rem;
     display: inline;
 }
+
+
 
 
 /* INFO */
@@ -599,6 +605,10 @@ main {
 @media only screen and (min-width: 750px) {
 
     /*for tablet */
+
+    #nav-desktop{
+        display: flex;
+    }
 
     .menu {
         visibility: hidden;
