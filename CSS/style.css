@@ -86,7 +86,6 @@ h4 {
 .tooltip {
     position: relative;
     display: inline-block;
-    z-index: 1;
 }
 
 .tooltip .tooltiptext {
@@ -157,9 +156,73 @@ a {
     transition: 0s, color;
 }
 
-nav section {
-    display: none;
+.menu {
+    visibility: visible;
+    background-color: orange;
+    align-self: center;
+    position: fixed;
+    width: 4.5rem;
+    height: 4.5rem;
+    margin: -2.5rem;
+    bottom: 1.5rem;
+    left: 50%;
+    border-radius: 50%;
+    color: red;
+    text-align: center;
+    opacity: 1;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: xx-large;
 }
+
+.menu:hover {
+    bottom: 3rem;
+}
+
+.menu-tooltiptext {
+    visibility: hidden;
+    opacity: 0;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--color-header);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: fixed;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -6.5rem;
+    z-index: 2;
+    transform: scale(0.5);
+    transition: 0.5s;
+}
+
+.menu-tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    margin-left: -25px;
+    border-width: 25px;
+    border-style: solid;
+    border-color: var(--color-header) transparent transparent transparent;
+}
+
+.tooltip:hover .menu-tooltiptext {
+    visibility: visible;
+    opacity: 0.9;
+    transform: translateY(-21rem);
+    transition: 0.5s;
+}
+
+
+nav section {
+    display: block;
+}
+
 
 nav section:hover {
     border-bottom: 3px solid;
@@ -316,16 +379,24 @@ main section {
     height: 4px;
     flex-grow: 1;
     background-color: #333;
+    border-radius: 2px;
 }
 
 .bar-progress {
     align-self: center;
     height: 4px;
+    border-radius: 2px;
     background-color: var(--color-title);
+    opacity: 0.8;
 }
 
-.programing-item:hover .bar-progress{
-    transform: scaleY(1.2);
+.programing-item:hover .bar-progress {
+    transform: scaleY(1.3);
+    opacity: 1;
+}
+
+.programing-item:hover .label {
+    color: #FFF;
 }
 
 #html {
@@ -345,7 +416,7 @@ main section {
 }
 
 #python {
-    width: 1%;
+    width: 3%;
 }
 
 #c {
@@ -363,6 +434,7 @@ main section {
     box-sizing: border-box;
     justify-content: space-evenly;
     text-align: center;
+    transition: 1s;
 }
 
 .software-item {
@@ -506,6 +578,7 @@ footer p {
 
 
 /* for smartphone */
+
 main {
     grid-area: main;
     display: grid;
@@ -518,7 +591,6 @@ main {
         'contact';
     grid-template-columns: 1fr;
     grid-gap: 10px;
-    padding: 10px;
 }
 
 
@@ -527,6 +599,11 @@ main {
 @media only screen and (min-width: 750px) {
 
     /*for tablet */
+
+    .menu {
+        visibility: hidden;
+        position: absolute;
+    }
 
     nav {
         display: flex;
@@ -572,7 +649,6 @@ main {
             'contact';
         grid-template-columns: 1fr;
         grid-gap: 10px;
-        padding: 0px;
     }
 
 
