@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="icon" href="imagenes/Favicon ProfileWeb.png">
     <title>Andrés Toller</title>
 </head>
 
@@ -294,20 +295,20 @@
                 <h2><i class="fa fa-envelope-o" aria-hidden="true"></i>
                     Contacto</h2>
             </a>
-            <form action="AHRELOCO">
+            <form action="https://formspree.io/f/mgedbolk" method="post">
                 <div class="form-container">
-                    <input type="text" value="" placeholder="Nombre">
-                    <input type="email" value="" placeholder="Email">
-                    <input type="text" value="" placeholder="Asunto">
-                    <textarea name="body" id="" placeholder="Deja tu mensaje!"></textarea>
-                    <button type="submit">Enviar</button>
+                    <input id="nombre" type="text" value="" placeholder="Nombre" name="name" required>
+                    <input id="email" type="email" value="" placeholder="Email" name="email" required>
+                    <input id="asunto" type="text" value="" placeholder="Asunto" name="asunto" required>
+                    <textarea id="mensaje" placeholder="Deja tu mensaje!" name="message" required></textarea>
+                    <div class="msj-error"></div>
+                    <button type="submit" id="boton-enviar">Enviar</button>
                 </div>
-
             </form>
         </section>
     </main>
     <footer>
-        <p>Copyright(?)</p>
+        <p>Copyright(?) 2022</p>
     </footer>
 
     <script src="index.js"></script>
