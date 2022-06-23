@@ -15,13 +15,23 @@
 <body>
     <header>
         <div class="header-container">
-            <div>
-                <div>Prog</div>
-                <div>Elect</div>
-                <div>Diseño</div>
+            <div class="perfiles-container">
+                <button class="btn-icon" title="Programación"><i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                </button>
+                <button class="btn-icon" title="Mecatrónica"><i class="fa fa-bolt fa-lg" aria-hidden="true"></i>
+                </button>
+                <button class="btn-icon" title="Diseño"><i class="fa fa-paint-brush fa-lg" aria-hidden="true"></i>
+                </button>
             </div>
             <h1>ANDRÉS TOLLER</h1>
-            <div>MODO</div>
+            <div class="utilities-container">
+                <button class="btn-icon" title="Modo Oscuro/Claro"><i class="fa fa-adjust fa-lg" aria-hidden="true"></i>
+                </button>
+                <button class="btn-icon" title="Traducir"><i class="fa fa-language fa-lg" aria-hidden="true"></i>
+                </button>
+                <button class="btn-icon" title="Imprimir CV"><i class="fa fa-print fa-lg" aria-hidden="true"></i>
+                </button>
+            </div>
         </div>
         <nav id="nav-desktop">
             <section><a href="#experience">Experiencia</a></section>
@@ -45,16 +55,22 @@
     </header>
 
     <aside>
-        <h2>Acerca de mi</h2>
-        <p>Hola! Me encuentro capacitandome en desarrollo Web. Actualmente aprendiendo Java, HTML, CSS, MySQL
-            y Git.
+        <h2>
+            <div class="aside-icon"><i class="fa fa-user-circle" aria-hidden="true"></i></div>
+            Acerca de mi
+        </h2>
+        <p>Hola! Me encuentro capacitandome en desarrollo Web.
             <br>
             Busco incorporarme en una organización donde pueda crecer y aprender nuevas tecnologías. Me comprometo a
             dedicar todo mi esfuerzo y empeño para cumplir los objetivos.
             <br>
             Me destaco por ser responsable, organizado y dedicado para realizar tareas de calidad.
         </p>
-        <h2>Info</h2>
+        <h2>
+            <div class="aside-icon"><i class="fa fa-info" aria-hidden="true"></i>
+            </div>
+            Info
+        </h2>
         <ul class="info">
             <li><i class="fa fa-mobile" aria-hidden="true"></i>
                 +54 261-tutututu</li>
@@ -65,21 +81,29 @@
                     style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe></li>
             <li><i class="fa fa-file-o" aria-hidden="true"></i></i>Página Web</li>
+            <li><i class="fa fa-birthday-cake" aria-hidden="true"></i>
+                Julio 1992</li>
         </ul>
-        <h2>Follow</h2>
+        <h2>
+            <div class="aside-icon"><i class="fa fa-user-plus" aria-hidden="true"></i>
+            </div>
+            Follow
+        </h2>
         <div class="follow">
             <a href="https://github.com/ADToller" target="_blank" class="fa fa-github"></a>
             <a href="https://www.linkedin.com/in/andres-toller/" target="_blank" class="fa fa-linkedin"></a>
+            <a href="https://t.me/Andres_stinky" target="_blank" class="fa fa-telegram"></a>
             <a href="https://www.instagram.com/andres.toller/" target="_blank" class="fa fa-instagram"></a>
             <a href="https://www.facebook.com/toller.andres/" target="_blank" class="fa fa-facebook"></a>
-            <a href="https://www.flickr.com/photos/130078283@N05/" target="_blank" class="fa fa-flickr"></a>
         </div>
     </aside>
 
     <main>
         <section class="experience">
             <a name="experience">
-                <h2><i class="fa fa-briefcase" aria-hidden="true"></i>Experiencia</h2>
+                <h2>
+                    <div class="title-icon"><i class="fa fa-briefcase" aria-hidden="true"></i></div>Experiencia
+                </h2>
             </a>
             <div class="empleo">
                 <h3 class="puesto">Técnico electrónico</h3>
@@ -132,7 +156,9 @@
 
         <section class="education">
             <a name="education">
-                <h2><i class="fa fa-graduation-cap" aria-hidden="true"></i>Educación</h2>
+                <h2>
+                    <div class="title-icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></div>Educación
+                </h2>
             </a>
             <div class="estudio">
                 <p>
@@ -160,35 +186,65 @@
 
         <section class="programing">
             <a name="programing">
-                <h2><i class="fa fa-code" aria-hidden="true"></i>Stack de tecnologías</h2>
+                <h2>
+                    <div class="title-icon"><i class="fa fa-code" aria-hidden="true"></i></div>Stack de tecnologías
+                </h2>
             </a>
             <ul class="programing-container">
-                <li class="programing-item"><span class="label">HTML</span>
+                <li class="programing-item"><i class="fa fa-html5" aria-hidden="true"></i>
+                    <span class="label">HTML<i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
                     <div class="bar">
                         <div class="bar-progress" id="html"></div>
                     </div>
                 </li>
-                <li class="programing-item"><span class="label">CSS</span>
+                <li class="programing-item"><i class="fa fa-css3" aria-hidden="true"></i>
+                    <span class="label">CSS<i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
                     <div class="bar">
                         <div class="bar-progress" id="css"></div>
                     </div>
                 </li>
-                <li class="programing-item"><span class="label">Javascript</span>
+                <li class="programing-item"><i class="fa fa-terminal" aria-hidden="true"></i>
+                    <span class="label">Javascript<i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
                     <div class="bar">
                         <div class="bar-progress" id="javascript"></div>
                     </div>
                 </li>
-                <li class="programing-item"><span class="label">Java</span>
+                <li class="programing-item"><i class="fa fa-terminal" aria-hidden="true"></i>
+                    <span class="label">Vue<i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                    <div class="bar">
+                        <div class="bar-progress" id="vue"></div>
+                    </div>
+                </li>
+                <li class="programing-item"><i class="fa fa-git" aria-hidden="true"></i><span class="label">Git<i
+                            class="fa fa-chevron-up" aria-hidden="true"></i></span>
+                    <div class="bar">
+                        <div class="bar-progress" id="git"></div>
+                    </div>
+                </li>
+                <li class="programing-item"><i class="fa fa-database" aria-hidden="true"></i><span class="label">MySQL<i
+                            class="fa fa-chevron-up" aria-hidden="true"></i></span>
+                    <div class="bar">
+                        <div class="bar-progress" id="mysql"></div>
+                    </div>
+                </li>
+                <li class="programing-item"><i class="fa fa-terminal" aria-hidden="true"></i>
+                    <span class="label">Java</span>
                     <div class="bar">
                         <div class="bar-progress" id="java"></div>
                     </div>
                 </li>
-                <li class="programing-item"><span class="label">Python</span>
+                <li class="programing-item"><i class="fa fa-terminal" aria-hidden="true"></i>
+                    <span class="label">Python<i class="fa fa-chevron-up" aria-hidden="true"></i></span>
                     <div class="bar">
                         <div class="bar-progress" id="python"></div>
                     </div>
                 </li>
-                <li class="programing-item"><span class="label">C++</span>
+                <li class="programing-item"><i class="fa fa-terminal" aria-hidden="true"></i>
+                    <span class="label">C++</span>
                     <div class="bar">
                         <div class="bar-progress" id="c"></div>
                     </div>
@@ -199,7 +255,9 @@
 
         <section class="software">
             <a name="software">
-                <h2><i class="fa fa-desktop" aria-hidden="true"></i>Software</h2>
+                <h2>
+                    <div class="title-icon"><i class="fa fa-desktop" aria-hidden="true"></i></div>Software
+                </h2>
             </a>
             <div class="software-container">
                 <div class="software-item"><svg width="100" height="100">
@@ -261,8 +319,10 @@
 
         <section class="interest">
             <a name="interest">
-                <h2><i class="fa fa-star" aria-hidden="true"></i>
-                    Intereses</h2>
+                <h2>
+                    <div class="title-icon"><i class="fa fa-star" aria-hidden="true"></i></div>
+                    Intereses
+                </h2>
             </a>
             <div class="interest-container">
                 <div class="interest-item tooltip"><i class="fa fa-youtube-play" aria-hidden="true"></i><iframe
@@ -298,8 +358,11 @@
 
         <section class="contact">
             <a name="contact">
-                <h2><i class="fa fa-envelope-o" aria-hidden="true"></i>
-                    Contacto</h2>
+                <h2>
+                    <div class="title-icon"><i class="fa fa-commenting" aria-hidden="true"></i>
+                    </div>
+                    Contacto
+                </h2>
             </a>
             <form action="https://formspree.io/f/mgedbolk" method="post">
                 <div class="form-container">
@@ -314,10 +377,13 @@
         </section>
     </main>
     <footer>
-        <p>Copyright(?) 2022</p>
+        <p><i class="fa fa-copyright" aria-hidden="true"></i>
+            Andres Toller · 2022 · <a href="">reportar falla <i class="fa fa-bug" aria-hidden="true"></i></a>
+        </p>
     </footer>
 
     <script src="index.js"></script>
+
 </body>
 
 </html>
