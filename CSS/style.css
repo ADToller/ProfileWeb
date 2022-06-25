@@ -9,8 +9,8 @@
 }
 
 html {
-    scroll-padding-top: 88px;
-  }
+    scroll-padding-top: 93px;
+}
 
 * {
     font-family: 'Montserrat', sans-serif;
@@ -222,14 +222,14 @@ h4 {
     text-decoration: none;
     color: var(--color-paragraph);
     margin: 0.2rem;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .follow .fa:hover {
     color: #FFF;
     text-shadow: 0 0 3px #FFFA;
     transform: scale(1.2);
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 a {
@@ -318,6 +318,20 @@ nav section:hover {
 nav section:active {
     background: var(--color-title);
     border-bottom: 3px;
+}
+
+main section:target {
+    animation: highlight-animation 1s;
+}
+
+@keyframes highlight-animation {
+    from {
+        background-color: #FFF3;
+    }
+
+    to {
+        background-color: var(--color-section);
+    }
 }
 
 body {
@@ -456,6 +470,7 @@ main section {
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
+    align-items: center;
 }
 
 .programing-item i {
@@ -480,6 +495,19 @@ main section {
     border-radius: 2px;
     background-color: var(--color-title);
     opacity: 0.8;
+}
+
+.fa-circle-up {
+    margin-left: 0.5rem;
+    color: var(--color-title);
+    opacity: 1;
+    animation: pulse-effect 2s infinite;
+}
+
+@keyframes pulse-effect {
+0%{opacity: 1;}
+50%{opacity: 0;}
+100%{opacity: 1;}
 }
 
 .programing-item:hover .bar-progress {

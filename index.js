@@ -1,3 +1,5 @@
+// alert("This page is under construction. Some things might not work properly")
+
 
 const nombre = document.querySelector("#nombre"); 
 const email = document.querySelector("#email");
