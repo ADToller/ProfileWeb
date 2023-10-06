@@ -461,7 +461,11 @@ main section {
 
 .programing-container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    transition: 1s;
     padding: 1rem;
 }
 
@@ -479,22 +483,6 @@ main section {
 
 .label {
     width: 7.5rem;
-}
-
-.bar {
-    align-self: center;
-    height: 4px;
-    flex-grow: 1;
-    background-color: #333;
-    border-radius: 2px;
-}
-
-.bar-progress {
-    align-self: center;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--color-title);
-    opacity: 0.8;
 }
 
 .fa-circle-up {
@@ -517,42 +505,6 @@ main section {
 
 .programing-item:hover .label {
     color: #FFF;
-}
-
-#html {
-    width: 65%;
-}
-
-#css {
-    width: 55%;
-}
-
-#javascript {
-    width: 15%;
-}
-
-#vue {
-    width: 5%;
-}
-
-#git {
-    width: 30%;
-}
-
-#mysql {
-    width: 25%;
-}
-
-#java {
-    width: 25%;
-}
-
-#python {
-    width: 20%;
-}
-
-#c {
-    width: 10%;
 }
 
 .software {
@@ -588,8 +540,6 @@ main section {
     stroke: orange;
     stroke-width: 4px;
     fill: none;
-    stroke-dasharray: 100 100;
-    stroke-dashoffset: 100;
 }
 
 .logo-software {
